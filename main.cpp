@@ -26,4 +26,9 @@ int main() {
 
   ll.emplace(56);
   ll.print();
+
+  LinkedList l2;
+
+  l2.emplace(10);
+  l2.print();
 }

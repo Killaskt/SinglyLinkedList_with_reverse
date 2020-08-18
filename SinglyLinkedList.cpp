@@ -28,30 +28,34 @@ LinkedList::~LinkedList() {
     delete temp;
     temp = next;
   }
+  len = 0;
   head = 0;
 }
 
 bool LinkedList::insert(int q) {
-  Node* i1 = new Node(q, NULL);
+  Node* n = new Node(q, NULL);
+  len++;
 
   if (head == NULL) {
-    head = i1;
+    head = n;
+    cout << n->data << " is now the start of the list." << endl;
   }
   else {
     Node* temp = head;
     while (temp->next != NULL) temp = temp->next;
-    cout << "Inserting " << i1->data << " at the end of the list." << endl;
-    temp->next = i1;
+    cout << "Inserting " << n->data << " at the end of the list." << endl;
+    temp->next = n;
   }
   return true;
 }
 
 bool LinkedList::emplace(int q) {
   Node* n = new Node(q, NULL);
+  len++;
 
   if (head == NULL) {
     head = n;
-    cout << n << " is now the start of the list." << endl;
+    cout << n->data << " is now the start of the list." << endl;
   }
   else {
     cout << "Inserting " << n->data << " at the start of the list." << endl;
