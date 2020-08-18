@@ -3,6 +3,7 @@
 #include "SinglyLinkedList.h"
 
 // TODO: add a function to remove duplicates
+// TODO: add template init
 
 using namespace std;
 
